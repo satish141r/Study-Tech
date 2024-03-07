@@ -26,10 +26,11 @@ app.use(express.json());
 app.use(cookkieParser());
 
 app.use(
-    cors({
-        origin:"https://study-tech-fronted.vercel.app/",
-    })
-)
+	cors({
+		origin: "*",
+		credentials: true,
+	})
+);
 app.use(
     fileUpload({
         useTempFiles:true,
